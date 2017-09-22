@@ -12,7 +12,10 @@ public class TreasureBot extends Robot
     }
     
     public void findTreasure() {
-       countBeeper();
+       for(int i=0; i<21;i++){
+           moving();
+           countBeeper();
+       }
     }
     
     public void countBeeper(){
@@ -35,7 +38,11 @@ public class TreasureBot extends Robot
         }
         if (numBeepers ==4){
             //go west
-            faceSouth();
+            faceWest();
+        }
+        if (numBeepers ==5){
+            //turn off
+            turnOff();
         }
     }
     public void faceNorth(){
@@ -56,6 +63,11 @@ public class TreasureBot extends Robot
     public void faceWest(){
         while (!facingWest()){
             turnLeft();
+        }
+    }
+    public void moving(){
+        while(!nextToABeeper()){
+            move();
         }
     }
 }

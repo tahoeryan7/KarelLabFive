@@ -15,4 +15,6 @@ comment6.params=
 comment6.target=void\ faceEast()
 comment7.params=
 comment7.target=void\ faceWest()
-numComments=8
+comment8.params=
+comment8.target=void\ moving()
+numComments=9
